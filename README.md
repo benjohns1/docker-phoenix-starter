@@ -25,12 +25,13 @@ Once your local app is setup, you can easily start/stop your containers with:
   * `docker-compose up`
   * `docker-compose down`
 
-### Your app should now be available on your host machine at `localhost:4000`
+### Your app is hosted at `localhost:4000`
 
 ## Notes
+ * If you have an existing Phoenix app and want to use this Docker setup, just place your existing code in the `./app` directory and skip steps 5 & 6 above when setting up your local environment.
  * On Windows there are problems with the automatic code reloading and brunch in Phoenix (due to complexities syncing code across the Windows/Linux filesystems).
  * The .dockerignore file is provided for convenience, if you want to containerize your app for staging and production environments moving forward.
- * This setup persists the PostgreSQL database using a Docker volume, and persists your application code on your local filesystem in the `./app` directory.
+ * This setup persists the PostgreSQL database using a Docker volume called `postgres-volume`, and persists your application code on your local filesystem in the `./app` directory.
 
 ## Thanks!
 To [bitwalker](https://github.com/bitwalker) for his excellent Phoenix Docker images
